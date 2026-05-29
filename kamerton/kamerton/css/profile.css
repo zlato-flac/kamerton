@@ -1,0 +1,142 @@
+/* Профиль */
+
+.profile-section {
+    margin-top: 40px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.profile__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile__name {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    font-family: 'Onest';
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.profile__change-name {
+    width: 34px;
+    height: 34px;
+
+    svg {
+        transition: width 0.2s, height 0.2s;
+    }
+
+    .stroke {
+        transition: fill 0.2s;
+    }
+
+    .fill {
+        transition: stroke 0.2s;
+    }
+
+    &:hover {
+        svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .stroke {
+            stroke: #42328B;
+        }
+
+        .fill {
+            fill: #42328B;
+        }
+    }
+}
+
+.profile__mail {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Onest';
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.profile__bottom__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Onest';
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* Список билетов */
+
+.ticket-list {
+    display: grid;
+    grid-template-columns: repeat(3, 378px);
+    grid-auto-rows: 370px;
+    gap: 30px;
+
+}
+
+.ticket {
+    transition: filter 0.2s;
+}
+
+.ticket:hover {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5))
+}
+
+.ticket__link {
+    color: #FFF;
+}
+
+.ticket__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px;
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ticket__inner__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.ticket__inner__title {
+    position: relative;
+    font-family: 'Onest';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 130%;
+    z-index: 1;
+}
+
+.ticket__info {
+    height: 70px;
+    background-color: #4832AA;
+    padding: 10px;
+    font-family: 'Narezka';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ticket--outdated {
+    background-color: rgba(72, 50, 170, 0.54);
+}
