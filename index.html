@@ -430,7 +430,6 @@
 
     </footer>
 
-    <script src=" script/checkbox.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src=" script/popup.js"></script>
     <script>
@@ -446,6 +445,18 @@
             slidesPerView: 2,
             spaceBetween: 30,
         });
+    </script>
+    <script>
+        const checkboxes = document.querySelectorAll('.ticket-checkbox')
+        const total = document.querySelector('.cart__total')
+
+        checkboxes.forEach(checkbox => {
+            const icon = checkbox.nextElementSibling
+            checkbox.checked ? icon.src = './img/ticket-filled.svg' : icon.src = './img/ticket-empty.svg'
+            checkbox.addEventListener('click', () => {
+                checkbox.checked ? icon.src = './img/ticket-filled.svg' : icon.src = './img/ticket-empty.svg'
+            })
+        })
     </script>
 </body>
 
